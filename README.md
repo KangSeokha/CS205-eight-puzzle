@@ -20,3 +20,8 @@
 `python3 driver.py`
 `python3 driver_for_static.py`
 `python3 visualize.py`
+
+## Performance Comparison
+
+![](max_queue_size_vs_depth_plot.png)
+![](nodes_expanded_vs_depth_plot.png)
