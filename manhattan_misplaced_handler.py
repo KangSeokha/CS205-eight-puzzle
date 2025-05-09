@@ -251,31 +251,3 @@ class ManhattanMisplacedHandler:
             [],  # Empty list for g(n) path values
             [],  # Empty list for h(n) path values
         )
-
-
-# if __name__ == '__main__':
-#     start_state = [2, 4, 3,
-#                    5, 1, 8,
-#                    7, 6, 0]
-#     goal_state = [1, 2, 3,
-#                   4, 5, 6,
-#                   7, 8, 0]
-
-#     solver = PuzzleSolver(start_state, goal_state, "manhattan")
-#     results = solver.solve()
-#     path, depth, max_queue, expanded_nodes, elpased_time, g_n, h_n = results
-
-#     new_result = (path, g_n, h_n)
-
-#     if path:
-#         print("Solved!")
-#         print("------------------------------")
-#         for state, g_val, h_val in zip(path, g_n, h_n):
-#             print(f"f(n): {g_val + h_val}, g(n): {g_val}, h(n): {h_val}")
-#             print_state(state)  # Print the state grid
-#         print(f"Depth for the Solution Was: {depth}")
-#         print(f"Number of Nodes Expanded: {expanded_nodes}")
-#         print(f"Max Queue Size: {max_queue}")
-#         print(f"Elpased Time : {elpased_time} sec")
-#     else:
-#         print("No solution")

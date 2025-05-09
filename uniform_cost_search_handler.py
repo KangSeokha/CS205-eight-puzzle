@@ -35,8 +35,7 @@ class UniformCostSearch:
 
         self.start_state: GridState = start_state
         self.goal_state: GridState = goal_state
-        self.goal_state_tuple: GridStateTuple = tuple(
-            goal_state)
+        self.goal_state_tuple: GridStateTuple = tuple(goal_state)
 
         self.queue: Deque[GridState] = deque()
         self.visited_states: Set[GridStateTuple] = set()
@@ -71,14 +70,17 @@ class UniformCostSearch:
             (-3, row > 0),  # Move Up
             (3, row < 2),  # Move Down
             (-1, col > 0),  # Move Left
-            (1, col < 2)  # Move Right
+            (1, col < 2),  # Move Right
         ]
 
         for delta_index, is_valid_move in potential_moves:
             if is_valid_move:
                 neighbor_index = zero_index + delta_index
                 next_state = list(state)
-                next_state[zero_index], next_state[neighbor_index] = next_state[neighbor_index], next_state[zero_index]
+                next_state[zero_index], next_state[neighbor_index] = (
+                    next_state[neighbor_index],
+                    next_state[zero_index],
+                )
                 neighbors.append(next_state)
 
         return neighbors
@@ -151,9 +153,4 @@ class UniformCostSearch:
             if node_was_expanded:
                 self.num_expanded_nodes += 1
 
-        return (
-            None,
-            None,
-            None,
-            None
-        )
+        return (None, None, None, None)

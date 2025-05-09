@@ -1,0 +1,16 @@
+Search Type,Depth,Nodes Expanded,Max Queue Size
+Manhattan,2,3,5
+Manhattan,3,4,4
+Manhattan,18,145,101
+Manhattan,26,2521,1409
+Manhattan,31,7132,3573
+Misplaced,2,3,5
+Misplaced,3,4,4
+Misplaced,18,1093,664
+Misplaced,26,28016,12620
+Misplaced,31,124658,24434
+UCS,2,8,8
+UCS,3,12,14
+UCS,18,23130,11644
+UCS,26,119826,24054
+UCS,31,127788,25134
